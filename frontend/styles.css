@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
 }
 
@@ -17,9 +18,13 @@ body {
   padding: 10px 20px;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
+
+  position: fixed; /* Fixes it to the viewport */
+  top: 0; /* Anchors it to the top */
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100%; /* Spans the full width of the screen */
+  z-index: 1000; /* Keeps it above other elements */
 }
 
 .navbar-container {
