@@ -32,6 +32,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: min-content;
 }
 
 /* Branding (Clickable Logo) */
@@ -106,7 +107,7 @@ html, body {
   border: 1px solid #e0e0e0;
   padding: 20px;
   width: 250px; /* Adjust width as needed */
-  height: 100vh; /* Make it take the full height of the viewport */
+  
   opacity: 0; /* Hides the menu initially */
   visibility: hidden; /* Prevents it from being interactive while hidden */
   transform: translateX(100%); /* Start offscreen to the right */
