@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
+  <title>Home Page</title>
+  <link rel="icon" type="image/svg+xml" href="./Assets/Promolina Favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main Navigation">
     <div class="navbar-container">
       <a href="./index.html" class="navbar-logo">
-        <img src="./Promolina Logo.svg" alt="Promolina Logo">
+        <img src="./Assets/Promolina Logo.svg" alt="Promolina Logo">
       </a>
-      <button class="hamburger-menu" aria-label="Toggle navigation">
+      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -26,6 +28,5 @@
       </ul>
     </div>
   </nav>
-  <script src="script.js"></script>
 </body>
 </html>

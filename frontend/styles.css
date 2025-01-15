@@ -136,6 +136,12 @@ html, body {
   color: #f36f21; /* Matches the logo color */
 }
 
+a:focus, button:focus {
+  outline: 2px solid #000; /* Or a color contrasting your design */
+  outline-offset: 2px;
+}
+
+
 /* Desktop Navbar */
 @media (min-width: 768px) {
   .hamburger-menu {
