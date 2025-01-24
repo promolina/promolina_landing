@@ -1,167 +1,41 @@
-/* General Reset */
+/* 
+  ****************************
+
+            RESET 
+
+  ****************************
+*/
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
-
-/* Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-
-
-  position: fixed; /* Fixes it to the viewport */
-  top: 0; /* Anchors it to the top */
-  left: 0; /* Ensures it starts from the left edge */
-  width: 100%; /* Spans the full width of the screen */
-  z-index: 1000; /* Keeps it above other elements */
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: min-content;
-}
-
-/* Branding (Clickable Logo) */
-.navbar-logo {
-  flex: 1; /* Ensures the logo stays aligned to the left */
-  text-align: left; /* Aligns the logo to the left inside its container */
-}
-
-.navbar-logo img {
-  height: 40px; /* Adjust size of the logo */
-  object-fit: contain; /* Ensures the logo scales proportionally */
-  transition: opacity 0.3s ease; /* Adds a hover animation */
-}
-
-.navbar-logo:hover img {
-  opacity: 0.8; /* Subtle effect when the logo is hovered */
-}
-
-/* Hamburger Menu Styles */
-.hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 18px;
-  width: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: relative; /* Makes z-index work */
-  z-index: 1001; /* Higher than the menu's z-index */
-}
-
-.hamburger-menu.active .line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-/* Transition for middle bar sliding out */
-.hamburger-menu .line:nth-child(2) {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Active state for the middle bar */
-.hamburger-menu.active .line:nth-child(2) {
-  transform: translateX(100px); /* Slide to the right */
-  opacity: 0; /* Fade out */
-}
-
-
-
-.hamburger-menu.active .line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Transition for smooth animation */
-.hamburger-menu .line {
-  height: 3px;
-  width: 100%;
-  background-color: #333;
-  border-radius: 2px;
-  transition: transform 0.5s ease, opacity 0.3s ease;
-}
-
-/* Navbar Items */
-.navbar-items {
+ul, ol {
   list-style: none;
-  display: flex;
-  flex-direction: column; /* Stacked in mobile view */
-  position: fixed; /* Make it fixed to the viewport */
-  top: 0; /* Position it at the top of the viewport */
-  right: 0; /* Align it to the right edge of the viewport */
-  background-color: #fffaf4; /* Match the background color in the image */
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  width: 250px; /* Adjust width as needed */
-  
-  opacity: 0; /* Hides the menu initially */
-  visibility: hidden; /* Prevents it from being interactive while hidden */
-  transform: translateX(100%); /* Start offscreen to the right */
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-items.active {
-  opacity: 1;
-  visibility: visible;
-  /* transform: translateY(0); */
-  transform: translateX(0); /* Slide it into view */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.navbar-items li {
-  margin: 10px 0;
+body {
+  line-height: 1.6;
 }
 
-.navbar-items a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  transition: color 0.3s ease;
+/* 
+*/
+
+/* 
+  navbar
+*/
+
+.branding svg {
+  width: 25%;
 }
 
-.navbar-items a:hover {
-  color: #f36f21; /* Matches the logo color */
-}
-
-a:focus, button:focus {
-  outline: 2px solid #000; /* Or a color contrasting your design */
-  outline-offset: 2px;
-}
-
-
-/* Desktop Navbar */
-@media (min-width: 768px) {
-  .hamburger-menu {
-    display: none; /* Hide hamburger menu */
-  }
-
-  .navbar-items {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    position: static;
-    background: none;
-    border: none;
-    width: auto;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .navbar-items li {
-    margin: 0 15px;
-  }
-}
-
+/*
+ */
