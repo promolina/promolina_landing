@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= name %> | Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+
+    p.tagline {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    .contact p {
+      margin-bottom: 0.3rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><%= name %></h1>
+
+<h3>Contact Info</h3>
+<ul>
+  <li><strong>Phone:</strong> <%= phone %></li>
+  <li><strong>Email:</strong> <%= email %></li>
+  <li><strong>Address:</strong> <%= address %></li>
+</ul>
+
+
+    <div class="contact">
+      <h4>Contact Us</h4>
+      <p><strong>Phone:</strong> <%= phone %></p>
+    </div>
+
+    <a href="/generator" class="back-link">&larr; Generate Another</a>
+  </div>
+</body>
+</html>

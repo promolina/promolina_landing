@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promolina Demo Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Promolina Demo Generator</h1>
+      <p>Fill in the fields to instantly preview a rebranded demo page.</p>
+    </header>
+
+    <div class="generator">
+      <form id="demoForm">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" placeholder="e.g. Garcia Electric" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. (555) 123-4567" />
+
+        <label for="services">Services (comma-separated)</label>
+        <textarea id="services" rows="3" placeholder="e.g. Wiring, Panel Upgrades, EV Chargers"></textarea>
+
+        <label for="cta">Call to Action</label>
+        <input type="text" id="cta" placeholder="e.g. Schedule Your Free Estimate" />
+
+        <label for="heroImage">Hero Image URL</label>
+        <input type="url" id="heroImage" placeholder="e.g. https://example.com/image.jpg" />
+
+        <label for="color">Primary Color</label>
+        <input type="color" id="color" value="#003366" />
+
+        <button type="submit">Generate Preview</button>
+      </form>
+
+      <div id="preview" class="preview">
+        <h2 id="previewName">Business Name</h2>
+        <img id="previewImage" src="" alt="Hero" />
+        <ul id="previewServices"></ul>
+        <p id="previewCTA">Call to action goes here</p>
+        <p id="previewPhone">Phone number here</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="generator.js"></script>
+</body>
+</html>
